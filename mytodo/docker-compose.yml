@@ -1,0 +1,11 @@
+version: '3.8'  # Specify the Docker Compose version
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    ports:
+      - "8000:8000"  # Map port 8000 on the host to port 8000 in the container
+    environment:
+      - ENV_VAR_NAME=value  # Add any necessary environment variables here
